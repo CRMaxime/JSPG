@@ -1,3 +1,3 @@
 JSPG v1.1 by Maxime
 
-!(jspg.png)
+![Screenshot](https://github.com/CRMaxime/JSPG/raw/master/jspg.png)
