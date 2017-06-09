@@ -2,7 +2,7 @@
 
 ![Screenshot](https://github.com/CRMaxime/JSPG/raw/master/jspg.png)
 
-Try it out [HERE](https://maximesimon.fr/jspg.html)
+Try it out [HERE](https://maximesimon.fr/jspg.html).
 
 ## Install
 ```
@@ -15,3 +15,4 @@ npm install
 ```
 npm start
 ```
+Then visit [http://localhost:3000](http://localhost:3000).
