@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>JSPG</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+        <link type="text/css" href="jquery.simple-color-picker.css" rel="stylesheet"/>
+        <link type="text/css" href="jspg.css" rel="stylesheet"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    </head>
+    <body>
+        <img src="settings.png" onclick="open_settings();" id="settings" class="settings-img"/>
+        <div id="panel" class="panel-div">
+            <div class="jspg-credits">JSPG v1.1 by Maxime :
+                <span id="count">0 particle</span>
+                @
+                <span id="fps">60</span>
+                FPS</div><br/>
+            <span class="presets-span">PRESET :</span>
+            <select onchange="load(this.value);" id="presets" class="presets-select"></select>
+            <hr class="presets-hr"/>
+            <div id="bg_color_picker" class="bg-color-picker"></div>
+            <div class="plus-div">+</div>
+            <select onchange="shape=this.value;" id="shape_selector" class="shape-selector">
+                <option>CIRCLES</option>
+                <option>SQUARES</option>
+                <option>LINES</option>
+                <option>LETTERS</option>
+                <option>RANDOM</option>
+            </select>
+            <div id="color_picker" class="color-picker-div"></div>
+            <input type="checkbox" onclick="random=this.checked;if(this.checked)canvas_element.onmouseup();" id="random" class="random-checkbox" checked/>
+            RANDOM<br/><input type="checkbox" onclick="transparent=this.checked;" checked id="transparent"/>
+            TRANSPARENT
+            <hr class="color-picker-hr"/>
+            <div class="settings-field">
+                <div id="size_range"></div>
+            </div>
+            <div style="margin-left:30px;">SIZE :</div><br/><br/>
+            <div class="settings-field">
+                <div id="rebound_slider"></div>
+            </div>
+            <div style="margin-left:4px;">REBOUND :</div><br/><br/>
+            <div class="settings-field">
+                <div id="gravity_slider"></div>
+            </div>
+            <div style="margin-left:8px;">GRAVITY :</div><br/><br/>
+            <div class="settings-field">
+                <div id="lifespan_slider"></div>
+            </div>
+            <div style="margin-left:2px;">LIFESPAN :</div><br/><br/>
+            <div class="settings-field" style="margin-top:6px;">
+                <div id="horizontal_range"></div>
+            </div>
+            <div id="horizontal">
+                <input type="checkbox" onclick="left=this.checked;" id="left" checked/>
+                <label for="left">←</label>
+                <input type="checkbox" onclick="right=this.checked;" id="right" checked/>
+                <label for="right">→</label>
+            </div><br/>
+            <div class="settings-field" style="margin-top:6px;">
+                <div id="vertical_range"></div>
+            </div>
+            <div id="vertical" class="vertical-div">
+                <input type="checkbox" onclick="up=this.checked;" id="up" checked>
+                <label for="up">↑</label>
+                <input type="checkbox" onclick="down=this.checked;" id="down" checked>
+                <label for="down">↓</label>
+            </div><br/>
+            <div class="settings-field">
+                <div id="spawn_slider"></div>
+            </div>
+            <div style="margin-left:2px;">SPAWN :</div><br/><br/>
+            <input type="checkbox" onclick="turbo=this.checked;" id="turbo" class="turbo-checkbox"/>
+            TURBO
+            <input type="checkbox" onclick="auto=this.checked;" class="auto-checkbox"/>
+            AUTO
+            <input type="button" value="SAVE" onclick="save();" class="save-button"/>
+        </div>
+        <canvas id="canvas" class="jspg-canvas"></canvas>
+        <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="jquery.simple-color-picker.js"></script>
+        <script type="text/javascript" src="jspg.js"></script>
+    </body>
+</html>

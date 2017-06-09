@@ -1,0 +1,25 @@
+{
+    "name": "jspg",
+    "version": "1.0.0",
+    "description": "JS Particle Generator",
+    "main": "server.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CRMaxime/JSPG.git"
+    },
+    "keywords": [
+        "JavaScript",
+        "Particle",
+        "Generator"
+    ],
+    "author": "CRMaxime",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CRMaxime/JSPG/issues"
+    },
+    "homepage": "https://github.com/CRMaxime/JSPG#readme",
+    "dependencies": {
+        "express": "latest"
+    }
+}
